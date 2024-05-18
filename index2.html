@@ -23,8 +23,9 @@
         width: 200px;
         background-color: black;
         color: white;
-        font-size: 17px;
+        font-size: 25px;
         cursor: pointer;
+        font-weight: 700;
       }
       .ph-rock {
         background-color: transparent;
@@ -98,6 +99,7 @@
          border-radius: 50px;
          padding-left: 50px;
          cursor: pointer;
+         font-weight: 700;
       }
     </style>
   </head>
@@ -107,7 +109,7 @@
       <div class="head">
         <audio src="image/siva.mp3" autoplay> </audio>
         <button onclick="BackColor()" class="js-bgcolor-btn bgcolor-btn-css">
-          background-color-BLACK
+         BG-BLACK
         </button>
         <p class="sub-heading">choose any !</p>
       </div>
@@ -257,14 +259,33 @@
         const body = document.body;
         const bgcolorBtn = document.querySelector(".js-bgcolor-btn");
 
-        if (bgcolorBtn.innerText.trim() === "background-color-BLACK") {
-          bgcolorBtn.innerText = "background-color-WHITE";
+        if (bgcolorBtn.innerText.trim() === "BG-BLACK") {
+          bgcolorBtn.innerText = "BG-WHITE";
           body.classList.add("black");
+          backgroundBlack();
         } else {
-          bgcolorBtn.innerText = "background-color-BLACK";
+          bgcolorBtn.innerText = "BG-BLACK";
           body.classList.remove("black");
+          backgroundWhite();
         }
       }
+      function backgroundBlack(){
+        document.querySelector('.css-reset').style.color = 'black';
+          document.querySelector('.css-reset').style.backgroundColor = 'white';
+          document.querySelector('.bgcolor-btn-css').style.backgroundColor = 'white';
+          document.querySelector('.bgcolor-btn-css').style.color = 'black';
+          // document.querySelector('.css-reset').style.backgroundColor = 'white';
+          // 
+      }
+      function backgroundWhite(){
+        document.querySelector('.css-reset').style.color = 'white';
+          document.querySelector('.css-reset').style.backgroundColor = 'black';
+          document.querySelector('.bgcolor-btn-css').style.backgroundColor = 'black';
+          document.querySelector('.bgcolor-btn-css').style.color = 'white';
+          // document.querySelector('.css-reset').style.backgroundColor = 'white';
+          // 
+      }
+
     </script>
   </body>
 </html>
