@@ -63,6 +63,7 @@
         align-items: center;
         justify-content: center;
       }
+      
       .result {
         top: 50px;
         display: flex;
@@ -117,16 +118,15 @@
         <div onclick="Playgame('rock')">
           <button class="ph-rock">
             <img src="image/rock.png" alt="Rock" />
-           
           </button> 
         </div>
         <div onclick="Playgame('paper')">
-          <button class="ph-rock">
+          <button class="ph-rock ph-rock1">
             <img src="image/paper.png" alt="Paper" />
           </button>
         </div>
         <div onclick="Playgame('scissor')">
-          <button class="ph-rock">
+          <button class="ph-rock ph-rock2">
             <img src="image/scissor.png" alt="Scissors" />
           </button>
         </div>
@@ -213,7 +213,7 @@
       function ShowDetails(computerMove, playerMove,result) {
         document.querySelector('.js-result').innerHTML = `<p> YOU PICKED :</p> <img src="./image/${playerMove}.png" alt="">
        <p> COMPUTER PICKED :</p><img src="./image/${computerMove}.png" alt="">`
-       document.querySelector('.js-result2').innerHTML = `<p> FINALY YOU ARE ${result.toUpperCase()} </p>`
+       document.querySelector('.js-result2').innerHTML = `<p> Finaly you are : ${result.toUpperCase()} </p>`
        document.querySelector('.js-result').style.display = 'flex';
       //  document.querySelector('.js-result1').style.display = "flex";
       }
@@ -274,6 +274,10 @@
           document.querySelector('.css-reset').style.backgroundColor = 'white';
           document.querySelector('.bgcolor-btn-css').style.backgroundColor = 'white';
           document.querySelector('.bgcolor-btn-css').style.color = 'black';
+          document.querySelector('.ph-rock').style.borderColor = 'white';
+          document.querySelector('.ph-rock1').style.borderColor = 'white';
+          document.querySelector('.ph-rock2').style.borderColor = 'white';
+          
           // document.querySelector('.css-reset').style.backgroundColor = 'white';
           // 
       }
@@ -282,6 +286,11 @@
           document.querySelector('.css-reset').style.backgroundColor = 'black';
           document.querySelector('.bgcolor-btn-css').style.backgroundColor = 'black';
           document.querySelector('.bgcolor-btn-css').style.color = 'white';
+          document.querySelector('.ph-rock').style.borderColor = 'black';
+          document.querySelector('.ph-rock1').style.borderColor = 'black';
+          document.querySelector('.ph-rock2').style.borderColor = 'black';
+          
+
           // document.querySelector('.css-reset').style.backgroundColor = 'white';
           // 
       }
