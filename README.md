@@ -1,0 +1,1 @@
+https://www-rock-paper-scissor.netlify.app/gamming-page
